@@ -1,0 +1,11 @@
+<div id="search-component" >
+  <h4>Hero Search</h4>
+ 
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" class="input"/>
+ <div [ngClass]="setClass()">
+    <ul class="search-result" class="search-list">
+       <li *ngFor="let hero of filter1" [innerHtml]="searchTerm(hero)" class="search-li">
+       </li>
+    </ul>
+ </div>
+</div>

@@ -1,0 +1,21 @@
+.search-box{
+    border: 1px solid;
+    width: 50%;
+    
+    margin-left: 25%;
+}
+
+.search-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.search-li{
+    margin: 2px;
+}
+.input{
+   width: 50%;
+    
+}

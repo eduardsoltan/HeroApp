@@ -1,0 +1,25 @@
+<h2>My Heroes</h2>
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <a href="/detail/{{ hero.id }}">
+          <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </a>
+      <button class="delete" title="delete hero"
+      (click)="delete(hero)">x</button>
+    </li>
+  </ul>
+
+  <div>
+    <label class="flex-1">Hero name:
+      <input #heroName class="flex-input"/>
+      <textarea #description id="" cols="30" class="flex-input"></textarea>
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(heroName.value , description.value); heroName.value=''; description.value=''">
+      add
+    </button>
+  </div>
+
+
+
+
